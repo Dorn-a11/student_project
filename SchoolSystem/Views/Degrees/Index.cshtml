@@ -1,0 +1,35 @@
+@model IEnumerable<SchoolSystem.Models.Degree>
+
+@{
+    ViewData["Title"] = "Index";
+    ViewData["Active"] = "Degree";
+}
+
+ 
+<div class="d-flex justify-content-between align-items-center">
+    <div>
+        <h1>All Degree</h1>
+    </div>
+    <div>
+        <button id="btnNew" class="btn btn-primary">New</button>
+    </div>
+</div>
+ 
+<table id="tblDegree" class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name English</th>
+            <th>Name Khmer</th>
+            <th>Action</th>
+      
+        </tr>
+    </thead>
+   
+</table>
+
+<partial name="_DegreeModal" />
+
+@section Scripts{
+    <script src="~/js/degree.js"></script>
+}
